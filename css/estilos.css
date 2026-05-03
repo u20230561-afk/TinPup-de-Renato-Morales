@@ -1,0 +1,389 @@
+/* =========================================
+   PALETA DE COLORES Y VARIABLES Y2K/AERO
+   ========================================= */
+:root {
+    --pink-light: #ffb6c1;
+    --pink-main: #fd7489;
+    --pink-dark: #ff4c68;
+    --pink-glow: rgba(255, 76, 104, 0.6);
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   ESTILOS GENERALES Y FONDO
+   ========================================= */
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Degradado fresco y luminoso */
+    background: linear-gradient(135deg, #ffffff 0%, var(--pink-light) 50%, var(--pink-main) 100%);
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================
+   EFECTOS FRUTIGER AERO (CRISTAL Y GLOSSY)
+   ========================================= */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(255, 116, 137, 0.3);
+}
+
+.btn-glossy {
+    background: linear-gradient(180deg, #ffffff 0%, var(--pink-light) 10%, var(--pink-dark) 100%);
+    border: 1px solid var(--glass-border);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px var(--pink-glow), inset 0 2px 5px rgba(255,255,255,0.8);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-glossy:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px var(--pink-glow), inset 0 2px 5px rgba(255,255,255,1);
+    color: white;
+}
+
+.btn-glossy-outline {
+    background: var(--glass-bg);
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
+    color: var(--pink-dark);
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-glossy-outline:hover {
+    background: white;
+    color: var(--pink-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--pink-glow);
+}
+
+/* =========================================
+   NAVBAR Y NAVEGACIÓN
+   ========================================= */
+.navbar {
+    background: rgba(253, 116, 137, 0.7) !important; /* Rosa translúcido */
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(255, 76, 104, 0.2);
+    padding-bottom: 1rem; /* Corregido del código original */
+}
+
+.navbar-brand h1 {
+    color: white;
+    font-weight: 900;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.nav-item {
+    padding: 0 18px; /* Corregida la clase (antes era nav-item sin punto) */
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white !important;
+    transition: text-shadow 0.3s;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 8px white, 0 0 15px var(--pink-light);
+}
+
+/* =========================================
+   SECCIÓN HERO (TÍTULO)
+   ========================================= */
+#titulo {
+    padding: 8% 15%;
+    text-align: left;
+    position: relative;
+    z-index: 2; /* Para que esté por encima de las burbujas */
+}
+
+#titulo h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: white;
+    text-shadow: 0 0 15px var(--pink-main), 2px 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+.title-image {
+    width: 60%;
+    transform: rotate(25deg);
+    filter: drop-shadow(0 15px 25px rgba(255, 76, 104, 0.5));
+    transition: transform 0.5s ease;
+}
+
+.title-image:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* =========================================
+   CARACTERÍSTICAS
+   ========================================= */
+#caracteristicas {
+    padding: 7% 15%;
+    position: relative;
+    z-index: 2;
+}
+
+.caja-caracteristica {
+    text-align: center;
+    padding: 5%;
+    transition: transform 0.3s;
+}
+
+.caja-caracteristica:hover {
+    transform: translateY(-10px);
+}
+
+.caja-caracteristica h3 {
+    font-weight: bold;
+    color: var(--pink-dark);
+    margin-top: 15px;
+}
+
+.caja-caracteristica p {
+    color: #555;
+    font-weight: 500;
+}
+
+.icon {
+    color: var(--pink-main);
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px var(--pink-light));
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    color: white;
+    filter: drop-shadow(0 0 15px var(--pink-main));
+}
+
+/* =========================================
+   TESTIMONIOS Y PRENSA
+   ========================================= */
+#testimonios {
+    padding: 7% 15%;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(253, 116, 137, 0.6) 0%, rgba(255, 76, 104, 0.8) 100%);
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
+
+#testimonios h2 {
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.img-testimonio {
+    width: 15%;
+    border-radius: 50%; /* Corregido de 100% a 50% para círculos perfectos */
+    margin: 20px;
+    border: 4px solid white;
+    box-shadow: 0 0 20px var(--pink-glow);
+    object-fit: cover;
+}
+
+#prensa {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.logo-prensa {
+    width: 15%;
+    margin: 20px 20px 50px;
+    filter: grayscale(100%) opacity(0.7);
+    transition: all 0.3s;
+}
+
+.logo-prensa:hover {
+    filter: grayscale(0%) opacity(1) drop-shadow(0 0 10px white);
+}
+
+/* =========================================
+   PRECIOS (TARJETAS DE CRISTAL)
+   ========================================= */
+#precios {
+    padding: 7% 15%;
+    text-align: center;
+}
+
+#precios h3 { color: var(--pink-dark); font-weight: 800; }
+#precios p { color: #666; margin-bottom: 40px; }
+
+.precios-col {
+    padding: 3%;
+}
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(255, 116, 137, 0.15);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(255, 76, 104, 0.3);
+}
+
+.card-header {
+    background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(253, 116, 137, 0.4) 100%);
+    padding: 20px;
+    border-bottom: 1px solid var(--glass-border);
+    color: #000;
+}
+
+.card-header h2 { color: var(--pink-dark); font-weight: 800; margin: 0; }
+
+.list-group-item {
+    background: transparent;
+    border-color: rgba(255,255,255,0.3);
+    color: #444;
+    font-weight: 500;
+}
+
+h2.precios { color: var(--pink-dark); font-weight: 900; }
+
+/* =========================================
+   CTA Y FOOTER
+   ========================================= */
+#cta {
+    background: linear-gradient(135deg, var(--pink-dark) 0%, var(--pink-main) 100%);
+    color: #fff;
+    padding: 7% 15%;
+    text-align: center;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.encabezado-cta {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 3.5rem; /* Corregido: la coma se cambió por punto */
+    line-height: 1.5;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+    margin-bottom: 40px;
+}
+
+#footer {
+    padding: 7% 15%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    color: var(--pink-dark);
+}
+
+.social-icon {
+    margin: 2% 1%;
+    color: var(--pink-main);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    color: var(--pink-dark);
+    filter: drop-shadow(0 0 8px var(--pink-light));
+    transform: scale(1.2);
+}
+
+/* =========================================
+   ANIMACIÓN FRUTIGER AERO (BURBUJAS/CORAZONES)
+   ========================================= */
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none; /* Evita que las burbujas bloqueen los clicks */
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 182, 193, 0.4));
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(253, 116, 137, 0.5);
+    animation: floatUp 10s infinite ease-in;
+    opacity: 0.6;
+}
+
+/* Agrega el emoji de corazón dentro de la burbuja */
+.bubble::after {
+    content: "💕";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* Tamaños, posiciones y velocidades aleatorias */
+.bubble:nth-child(1) { left: 10%; width: 60px; height: 60px; animation-duration: 8s; }
+.bubble:nth-child(2) { left: 20%; width: 40px; height: 40px; animation-duration: 12s; animation-delay: 2s; }
+.bubble:nth-child(3) { left: 35%; width: 80px; height: 80px; animation-duration: 15s; animation-delay: 1s; }
+.bubble:nth-child(4) { left: 50%; width: 30px; height: 30px; animation-duration: 9s; animation-delay: 4s; }
+.bubble:nth-child(5) { left: 65%; width: 50px; height: 50px; animation-duration: 11s; animation-delay: 0s; }
+.bubble:nth-child(6) { left: 80%; width: 70px; height: 70px; animation-duration: 14s; animation-delay: 3s; }
+.bubble:nth-child(7) { left: 90%; width: 45px; height: 45px; animation-duration: 10s; animation-delay: 5s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 0; }
+    20% { opacity: 0.8; }
+    50% { transform: translateY(-50vh) scale(1.2); }
+    100% { transform: translateY(-120vh) scale(0.8); opacity: 0; }
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================= */
+@media (max-width: 1028px) {
+    #titulo {
+        text-align: center;
+    }
+    .title-image {
+        position: static;
+        transform: rotate(0);
+        margin-top: 30px;
+        width: 70%;
+    }
+}
